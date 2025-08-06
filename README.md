@@ -8,8 +8,20 @@ This system provides both **Classification** and **Segmentation** capabilities f
 ```bash
 pip install -r requirements.txt
 ```
-### 2. Run Application
 
+### 2. Download Models from Google Drive
+Due to large model file sizes, download the trained models from Google Drive:
+
+**📁 Download All Models:**
+- [Download Models Folder](https://drive.google.com/drive/folders/1gooYtwNljNyEGxqXV3WuUE4IvgaPsQ_5?usp=drive_link)
+
+**Individual Models:**
+- **Classification Model (ResNet50V2)**: `model-brain-mri-ResNet50V2.h5` (96.2 MB)
+- **Segmentation Model (U-Net)**: `model-brain-mri-Unet.h5` (99.2 MB)
+
+Place the downloaded models in the project root directory.
+
+### 3. Run Application
 
 ```bash
 # Run the main application
@@ -26,10 +38,13 @@ Project Computer Vision/
 ├── requirements.txt                # Python dependencies
 ├── Classification.ipynb            # Classification training
 ├── Segmentation.ipynb              # Segmentation training
-├── model-brain-mri-ResNet50V2.h5  # Classification model
-├── model-brain-mri-Unet.h5        # Segmentation model
+├── model-brain-mri-ResNet50V2.h5  # Classification model (Download from Drive)
+├── model-brain-mri-Unet.h5        # Segmentation model (Download from Drive)
 ├── test_images/                    # Classification test images
+└── MRI/                           # Training data
 ```
+
+**Note:** Model files are not included in the repository due to size limitations. Download them from Google Drive links above.
 
 ## 🔧 Features
 
@@ -79,8 +94,10 @@ Project Computer Vision/
 ### Common Issues:
 
 1. **Model Loading Error**:
+   - Download model files from Google Drive links above
    - Check if model files exist: `model-brain-mri-ResNet50V2.h5`, `model-brain-mri-Unet.h5`
    - Verify file permissions
+   - Ensure models are in the project root directory
 
 2. **Segmentation Issues**:
    - Ensure images are in correct format
@@ -111,17 +128,6 @@ Project Computer Vision/
 - **Patients**: Multiple patient directories
 - **Images per Patient**: Variable (10-50 images)
 
-## 🔍 Advanced Usage
-
-### Custom Thresholds:
-- Modify classification threshold in the app
-- Adjust segmentation threshold in code
-- Fine-tune for your specific use case
-
-### Batch Processing:
-- Modify the code for batch image processing
-- Add support for multiple image uploads
-- Implement automated reporting
 
 ## 🤝 Contributing
 
